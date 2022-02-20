@@ -1,0 +1,105 @@
+@media all and (max-width: 1000px) {
+  /* ===================
+   Arrivee sur le site
+======================== */
+
+  .arrivee_site {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .arrivee_site h1 {
+    width: 90%;
+    text-align: center;
+    margin: auto;
+    padding: 1rem 0;
+  }
+
+  /* ===============================
+   Taille de police des boutons
+================================== */
+
+  .bouton {
+    font-size: 1rem;
+  }
+
+  /* =====================================
+   Triangles
+======================================== */
+
+  .triangles_individuels {
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 55px solid white;
+  }
+
+  /* ===============
+   Les triangles disparus
+=================== */
+
+  .milieu_bas_gauche,
+  .milieu_haut_droit,
+  .milieu_bas_droit,
+  .sous_last_game,
+  .sous_before_last_game {
+    display: none;
+  }
+
+  /* ======================
+   Les triangles rescapés
+=========================== */
+
+  .haut_gauche {
+    top: 13%;
+    left: 40%;
+    rotate: 50deg;
+  }
+
+  .haut_droite {
+    top: 20%;
+    rotate: 120deg;
+  }
+
+  /* ===================
+   About
+======================== */
+
+  .about {
+    flex-direction: column;
+    align-items: center;
+
+    padding: 4.125rem 4.875rem;
+  }
+  .about_textes {
+    align-items: center;
+  }
+  .about p {
+    width: 70%;
+  }
+
+  /* ===================
+   Derniers jeux
+======================== */
+  .latest_games {
+    padding: 5.9375rem 2rem;
+  }
+  .latest_games p {
+    padding: 1rem 0;
+  }
+  .latest_games div div {
+    margin-bottom: 1rem;
+  }
+  .latest_games div,
+  .latest_games h2 {
+    align-self: center;
+  }
+  .presentation_game_container {
+    grid-template-rows: 5% 40% 30% 5%;
+    grid-column-gap: 6%;
+    grid-template-areas: "titre" "image" "texte" "bouton";
+  }
+  .see_more {
+    margin-top: 3rem;
+  }
+}

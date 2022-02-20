@@ -1,0 +1,134 @@
+@import url("global_phone.css");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: ebrima;
+  src: url(./../Font/ebrima.ttf);
+}
+:root {
+  --main-color: #001230;
+  --accent-color: #004ac9;
+  font-family: ebrima;
+}
+body {
+  color: #fff;
+}
+
+/* ========
+    HEADER
+=========== */
+
+header {
+  background: var(--main-color);
+  position: fixed;
+  width: 100vw;
+}
+header a {
+  padding: 0 2.5rem;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.875rem;
+}
+
+/* =====================================
+    Background pour les sections bleues
+======================================== */
+
+.background_main_color {
+  background: var(--main-color);
+}
+
+/* =======================
+    Style pour les boutons
+=========================== */
+
+.bouton {
+  background: var(--accent-color);
+  padding: 0.625rem 1.875rem;
+  border-radius: 0.625rem;
+  color: #fff;
+  text-decoration: none;
+  width: fit-content;
+  width: -moz-fit-content;
+}
+
+/* ===================================
+    Style trait en dessous des titres
+====================================== */
+
+.separation_titre {
+  height: 0.2rem;
+  background: #004ac9;
+  width: 5vw;
+  margin-top: 0.2rem;
+}
+
+/* ========
+    FOOTER
+=========== */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+}
+footer a,
+footer p {
+  margin: 0;
+  height: fit-content;
+  height: -moz-fit-content;
+  text-decoration: none;
+}
+footer p {
+  color: #001230;
+}
+
+/* =====================================
+    CSS specialement pour le format PC
+======================================== */
+
+@media all and (min-width: 1001px) {
+  /* ========
+    HEADER
+=========== */
+
+  header {
+    text-align: center;
+    z-index: 98;
+    padding: 1.875rem 0;
+  }
+
+  /* ==========================================================
+    Menu pour le téléphone donc qui ne s'affiche pas en PC
+=============================================================== */
+
+  #check {
+    display: none;
+  }
+  .checkbtn {
+    display: none;
+  }
+
+  /* ============================
+    Style pour les boutons PC
+================================ */
+
+  .bouton {
+    font-size: 1.875rem;
+  }
+  /* ========
+    FOOTER
+=========== */
+
+  footer {
+    flex-direction: row-reverse;
+    padding: 1rem 6.325rem 1rem 2.9375rem;
+  }
+  footer a,
+  footer p {
+    align-self: center;
+  }
+}

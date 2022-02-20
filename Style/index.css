@@ -1,0 +1,322 @@
+@import url("index_phone.css");
+
+/* =========
+    Global
+=========== */
+
+h1 {
+  margin-bottom: 7%;
+}
+p {
+  font-size: 1.5rem;
+}
+main {
+  max-width: 100vw;
+}
+
+/* =====================================
+    Centrer boutons
+======================================== */
+
+.bouton {
+  align-self: center;
+}
+
+/* =====================================
+   Taille des titres de section
+======================================== */
+
+.titre_section {
+  font-size: 3.125rem;
+}
+
+/* =====================================
+   Trait en dessous des titres
+======================================== */
+
+.trait_separation_titre {
+  height: 0.2rem;
+  background: var(--accent-color);
+  width: 5vw;
+  margin-bottom: 1rem;
+}
+
+/* =====================================
+   Arrivée sur le site
+======================================== */
+
+.arrivee_site {
+  height: 100vh;
+  font-size: 2.875rem;
+  padding-top: 11.875rem;
+}
+.arrivee_site div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* =====================================
+   Triangles
+======================================== */
+
+.triangles_container {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-areas: " trigauche tridroit" "triscroll triscroll";
+  grid-template-columns: 30% 30%;
+  grid-template-rows: 90% 10%;
+  grid-column-gap: 40%;
+}
+.triangles_gauche {
+  grid-area: trigauche;
+  position: relative;
+}
+.triangles_droit {
+  grid-area: tridroit;
+  position: relative;
+}
+.animation_scroll {
+  grid-area: triscroll;
+  position: relative;
+  animation-name: animation_groupe;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
+#triangle_scroll {
+  position: relative;
+  left: 47%;
+  bottom: 10%;
+  rotate: 90deg;
+}
+.triangles_individuels {
+  width: 0;
+  height: 0;
+}
+.animation_groupe {
+  animation-name: animation_groupe;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes animation_groupe {
+  0% {
+    top: 5px;
+  }
+  50% {
+    top: 0;
+  }
+  100% {
+    top: 5px;
+  }
+}
+/* =================
+   triangle gauche
+=================== */
+
+.haut_gauche {
+  position: relative;
+  z-index: 99;
+}
+
+/* ===============
+   Triangle droit
+=================== */
+
+.haut_droite {
+  position: relative;
+  z-index: 99;
+}
+
+/* =====================================
+   section à propos
+======================================== */
+
+.about {
+  display: flex;
+  color: var(--main-color);
+}
+.about img {
+  background: #fff;
+  box-shadow: -1px -1px 14px -1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -1px -1px 14px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px -1px 14px -1px rgba(0, 0, 0, 0.75);
+  border-radius: 50%;
+  width: 25vw;
+  height: 25vw;
+}
+.about_textes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.about_textes p {
+  margin-bottom: 3rem;
+}
+
+/* =====================================
+   Section des derniers jeux
+======================================== */
+
+.latest_games {
+  display: flex;
+  flex-direction: column;
+}
+.presentation_game_container {
+  display: grid;
+  margin-top: 4.03125rem;
+}
+.presentation_game_container img {
+  grid-area: image;
+  width: 100%;
+}
+.trait_separation_titre_h3 {
+  height: 0.15rem;
+  width: 5vw;
+  background: white;
+}
+.presentation_game_container div {
+  grid-area: titre;
+}
+.presentation_game_container h3 {
+  font-size: 1.875rem;
+}
+.presentation_game_container p {
+  text-align: center;
+  grid-area: texte;
+  font-size: 1.1rem;
+  align-self: center;
+}
+.presentation_game_container a {
+  justify-self: center;
+}
+.see_more {
+  color: white;
+  text-decoration: none;
+  border-bottom: 0.1rem white solid;
+  padding-bottom: 0.2rem;
+  font-size: 1.5625rem;
+  align-self: center;
+  grid-area: bouton;
+}
+
+/* =========================================================================================================================================
+                                                        CSS specialement pour le format PC
+============================================================================================================================================= */
+
+@media all and (min-width: 1001px) {
+  h1 {
+    font-size: 7.375rem;
+  }
+
+  /* ===================
+   Arrivee sur le site
+======================== */
+
+  .arrivee_site {
+    padding-left: 9.375rem;
+  }
+  .arrivee_site div {
+    width: fit-content;
+    width: -moz-fit-content;
+  }
+
+  /* =====================================
+   Triangles
+======================================== */
+
+  .triangles_individuels {
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    border-left: 65px solid white;
+    filter: drop-shadow(5px 10px 4px rgba(0, 0, 0, 0.5));
+  }
+
+  /* ===============
+   Triangle gauche
+=================== */
+
+  .haut_gauche {
+    left: 20%;
+    top: 15%;
+    rotate: 110deg;
+  }
+  .milieu_bas_gauche {
+    position: relative;
+    top: 65%;
+    left: 60%;
+    rotate: -100deg;
+  }
+
+  /* ===============
+   Triangle droit
+=================== */
+
+  .haut_droite {
+    left: 70%;
+    top: 4%;
+    rotate: -100deg;
+  }
+  .milieu_haut_droit {
+    position: relative;
+    left: 10%;
+    top: 15%;
+    rotate: -50deg;
+  }
+  .milieu_bas_droit {
+    position: relative;
+    left: 45%;
+    top: 40%;
+    rotate: -40deg;
+  }
+
+  /* =====================================
+   A propos
+======================================== */
+
+  .about {
+    padding: 4.125rem 0 4.125rem 4.875rem;
+  }
+  .about_textes {
+    padding-left: 7.375rem;
+    padding-right: 4.75rem;
+  }
+  .triangle_bleu {
+    border-left: 65px solid var(--main-color);
+    position: relative;
+    right: 20%;
+    rotate: 20deg;
+  }
+
+  /* =====================================
+   derniers jeux
+======================================== */
+
+  .latest_games {
+    padding: 5.9375rem 3.25rem 4.84375rem 6.40625rem;
+  }
+  .presentation_game_container {
+    height: 40vh;
+    grid-column-gap: 10%;
+    grid-template-rows: 20% 60% 20%;
+    margin-bottom: 6.375rem;
+  }
+  .last_game {
+    grid-template-areas: "titre image" "texte image" "bouton image";
+    grid-template-columns: 40% 50%;
+  }
+  .before_last_game {
+    grid-template-areas: "image titre" "image texte" "image bouton";
+    grid-template-columns: 50% 40%;
+  }
+  .sous_last_game {
+    position: relative;
+    rotate: 40deg;
+  }
+  .sous_before_last_game {
+    position: relative;
+    rotate: 10deg;
+    left: 80%;
+  }
+}

@@ -1,0 +1,55 @@
+@media all and (max-width: 1000px) {
+  /* ==================================================================
+    Checkbox qui permet d'ouvrir le menu sur téléphone avec un click 
+======================================================================= */
+
+  #check {
+    display: none;
+  }
+  .checkbtn {
+    display: block;
+    margin-right: 5%;
+    cursor: pointer;
+    align-self: flex-end;
+    padding: 1.875rem 0 1rem 0;
+  }
+  #check:checked ~ nav {
+    right: 0;
+  }
+
+  /* ===========
+    HEADER
+============== */
+
+  header {
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+  }
+  header nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 91vh;
+    background-color: #004ac9;
+    width: 100%;
+    position: absolute;
+    top: 73px;
+    right: -100%;
+    transition: all 0.2s;
+  }
+  header a {
+    width: fit-content;
+    width: -moz-fit-content;
+    align-self: center;
+  }
+
+  /* ===========
+    FOOTER
+============== */
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+  }
+}

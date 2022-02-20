@@ -1,0 +1,56 @@
+@import url("valid_phone.css");
+main {
+  padding: 100px 5% 1% 5%;
+  width: 100vw;
+  height: 88.2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* =====================================
+   Grand triangle
+======================================== */
+
+.triangle_valid {
+  border-top: 10vw solid transparent;
+  border-bottom: 10vw solid transparent;
+  border-left: 15vw solid white;
+  filter: drop-shadow(5px 10px 4px rgba(0, 0, 0, 0.5));
+}
+p {
+  font-size: 1.875rem;
+}
+
+/* =====================================
+   Liens
+======================================== */
+
+.background_main_color a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 0.1rem solid white;
+}
+
+/* =====================================
+   Animation triangles
+======================================== */
+
+.animation_groupe {
+  position: relative;
+  animation-name: animation_groupe;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes animation_groupe {
+  0% {
+    top: 5px;
+  }
+  50% {
+    top: 0;
+  }
+  100% {
+    top: 5px;
+  }
+}
