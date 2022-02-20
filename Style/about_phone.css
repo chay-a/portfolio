@@ -1,0 +1,50 @@
+@media all and (max-width: 1000px) {
+  /* =====================================
+   Division avec les textes et l'image
+======================================== */
+
+  .about_contenu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* =====================================
+   Image + triangles
+======================================== */
+
+  .image_deco div {
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 55px solid white;
+    filter: drop-shadow(5px 10px 4px rgba(0, 0, 0, 0.5));
+  }
+  .image_deco img {
+    width: 30%;
+  }
+
+  /* =====================================
+   Textes
+======================================== */
+
+  .textes {
+    padding: 0 4rem;
+  }
+  .textes p {
+    text-align: center;
+  }
+
+  /* =====================================
+   Position triangles
+======================================== */
+
+  .triangles_haut {
+    position: relative;
+    right: 10%;
+    rotate: -120deg;
+  }
+  .triangles_bas {
+    position: relative;
+    left: 10%;
+    rotate: 60deg;
+  }
+}

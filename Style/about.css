@@ -1,0 +1,131 @@
+@import url("about_phone.css");
+main {
+  padding: 100px 3% 5% 3%;
+  width: 100vw;
+}
+
+/* =====================================
+   Division avec les textes et l'image
+======================================== */
+
+.about_contenu {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2%;
+}
+
+/* =====================================
+   Image + triangles
+======================================== */
+
+.image_deco {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.image_deco img {
+  border-radius: 50%;
+  position: relative;
+  bottom: 20%;
+}
+.triangles_haut,
+.triangles_bas {
+  position: relative;
+}
+
+/* =====================================
+   Textes
+======================================== */
+
+.textes {
+  font-size: 1.4rem;
+}
+.textes p {
+  padding-bottom: 5%;
+  text-indent: 3rem;
+}
+
+/* =====================================
+   Animation triangles
+======================================== */
+
+.animation_groupe {
+  position: relative;
+  animation-name: animation_groupe;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes animation_groupe {
+  0% {
+    top: 5px;
+  }
+  50% {
+    top: 0;
+  }
+  100% {
+    top: 5px;
+  }
+}
+
+/* =========================================================================================================================================
+                                                        CSS specialement pour le format PC
+============================================================================================================================================= */
+
+@media all and (min-width: 1001px) {
+  main {
+    height: 88.2vh;
+  }
+
+  /* =====================================
+   Division avec les textes et l'image
+======================================== */
+
+  .about_contenu {
+    flex-direction: row-reverse;
+  }
+
+  /* =====================================
+   Image + triangles
+======================================== */
+
+  .image_deco {
+    width: 40%;
+  }
+  .image_deco div {
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    border-left: 65px solid white;
+    filter: drop-shadow(5px 10px 4px rgba(0, 0, 0, 0.5));
+  }
+  .image_deco img {
+    width: 55%;
+  }
+
+  /* =====================================
+   Triangles position
+======================================== */
+
+  .triangles_haut {
+    position: relative;
+    rotate: -50deg;
+    left: 25%;
+    bottom: 13%;
+  }
+  .triangles_bas {
+    position: relative;
+    rotate: 15deg;
+    right: 25%;
+    bottom: 30%;
+  }
+
+  /* =====================================
+   Textes
+======================================== */
+
+  .textes {
+    width: 50%;
+  }
+  .textes p {
+    text-align: justify;
+  }
+}
